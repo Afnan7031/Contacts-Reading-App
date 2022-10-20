@@ -61,8 +61,8 @@ object ContactsLoader {
                             email = retrieveEmail(cr, id)
                             mobileNumber = retrieveMobileNumber(cr, id)
 
-                            phoneNumber = retrievePhoneNumber(cr, id)
-                            faxNumber = retrieveFaxNumber(cr, id)
+                            phoneNumber = mobileNumber
+                            faxNumber = mobileNumber
                             birthday = retrieveBirthday(cr, id)
 
                             name = cursor.getString(nameIndex)

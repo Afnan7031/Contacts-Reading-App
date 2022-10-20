@@ -43,6 +43,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home),
     }
 
     override fun onItemClick(contact: Contact) {
+        if (!isAdded)
+            return
         val action = HomeFragmentDirections.actionHomeFragmentToContactDetailsFragment(contact)
         findNavController().navigate(action)
     }
